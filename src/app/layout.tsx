@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { Navbar } from '@/components/navbar'
+import { RightSidebar } from '@/components/right-sidebar'
 
 const gilroyFont = localFont({
   display: 'swap',
@@ -42,12 +44,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gilroyFont.variable} font-gilroy flex min-h-screen w-full justify-between gap-4 py-8 antialiased md:gap-12`}
+        className={`${gilroyFont.variable} font-gilroy flex min-h-screen w-full justify-between py-8 antialiased`}
         style={{
           background: 'linear-gradient(180deg, #2F2453 0%, #0D0429 100%)',
         }}
       >
+        <Navbar />
         {children}
+        <RightSidebar />
       </body>
     </html>
   )
