@@ -15,12 +15,20 @@ export const NavSection = () => {
         />
       </div>
 
-      <div className="flex h-12 w-12 items-center justify-center gap-2 rounded-full border border-gray-50">
-        <Image src="/svg/ring.svg" width={21} height={21} alt="notification" />
-      </div>
+      <div className="flex items-center gap-4">
+        <div className="relative flex h-12 w-12 items-center justify-center gap-2 rounded-full border border-gray-50">
+          <span className="bg-primary absolute top-0 right-0 h-3 w-3 rounded-full"></span>
+          <Image
+            src="/svg/ring.svg"
+            width={21}
+            height={21}
+            alt="notification"
+          />
+        </div>
 
-      <div className="flex h-12 w-12 items-center justify-center gap-2 rounded-full border border-gray-50">
-        <Image src="/svg/user.svg" width={21} height={21} alt="user" />
+        <div className="flex h-12 w-12 items-center justify-center gap-2 rounded-full border border-gray-50">
+          <Image src="/svg/user.svg" width={21} height={21} alt="user" />
+        </div>
       </div>
     </div>
   )
