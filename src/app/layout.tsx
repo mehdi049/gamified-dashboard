@@ -42,7 +42,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gilroyFont.variable} font-gilroy gp-4 flex min-h-screen justify-between bg-black py-8 antialiased md:gap-12`}
+        className={`${gilroyFont.variable} font-gilroy flex min-h-screen w-full justify-between gap-4 py-8 antialiased md:gap-12`}
+        style={{
+          background: 'linear-gradient(180deg, #2F2453 0%, #0D0429 100%)',
+        }}
       >
         {children}
       </body>
