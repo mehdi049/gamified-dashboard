@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
+import { Input } from '@/components/ui/input'
 import H1 from '@/components/ui/typography/h1'
 import H2 from '@/components/ui/typography/h2'
 import H3 from '@/components/ui/typography/h3'
@@ -34,7 +35,17 @@ export default function Home() {
   ]
   return (
     <>
-      <div className="main-content grow space-y-8 px-8">
+      <div className="grow space-y-8 px-8">
+        <div className="relative">
+          <Image
+            src="/svg/search.svg"
+            width={22}
+            height={22}
+            alt="search"
+            className="absolute top-4 left-4"
+          />
+          <Input placeholder="Search anything..." />
+        </div>
         <H2 className="text-white">Welcome Back, Madelen</H2>
 
         <div
@@ -43,10 +54,19 @@ export default function Home() {
         >
           <div className="space-y-4">
             <H1 className="text-white">Your Next Creation Starts Here</H1>
-            <p className="max-w-xl text-lg">
-              Browse & Remix a Vast Collection of Editable, Game-Ready
-              Meshes.With Remix AI, transform any asset—no skills needed.
-            </p>
+            <div className="flex items-center justify-between gap-4">
+              <p className="max-w-xl text-lg">
+                Browse & Remix a Vast Collection of Editable, Game-Ready
+                Meshes.With Remix AI, transform any asset—no skills needed.
+              </p>
+
+              <Image
+                src="/svg/arrow-right-bg-black.svg"
+                width={45}
+                height={45}
+                alt=""
+              />
+            </div>
           </div>
         </div>
 
@@ -129,9 +149,10 @@ const HightLightItem = ({
         <Button>
           <Image
             src="/svg/arrow-top-bg-white.svg"
-            width={20}
-            height={20}
+            width={24}
+            height={24}
             alt="arrow-top"
+            className="h-6 w-6"
           />
           {ctaText}
         </Button>
@@ -152,9 +173,18 @@ const ActionItem = ({ background, title, text }: ActionItemProps) => {
       className="flex h-60 flex-col justify-end gap-4 rounded-4xl bg-cover bg-center p-4"
       style={{ backgroundImage: `url(/img/${background}.png)` }}
     >
-      <div>
-        <p className="text-[38px] font-bold text-white">{title}</p>
-        <p className="text-sm font-bold">{text}</p>
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-[38px] font-bold text-white">{title}</p>
+          <p className="text-sm font-bold">{text}</p>
+        </div>
+
+        <Image
+          src="/svg/arrow-right-bg-black.svg"
+          width={45}
+          height={45}
+          alt=""
+        />
       </div>
     </div>
   )
