@@ -47,7 +47,7 @@ export const QuickActions = () => {
           width={122}
           height={319}
           alt=""
-          className="absolute -top-8 -right-14 z-0 h-[330px]"
+          className="absolute -top-14 -left-12 z-0 h-[380px] opacity-90"
         />
 
         <Image
@@ -55,7 +55,7 @@ export const QuickActions = () => {
           width={122}
           height={319}
           alt=""
-          className="absolute -top-8 -left-8 z-0 h-[330px]"
+          className="absolute -top-8 -right-14 z-0 h-[330px]"
         />
       </Carousel>
     </>
