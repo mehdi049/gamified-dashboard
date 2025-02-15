@@ -14,7 +14,7 @@ export const RightSidebar = () => {
   }
 
   return (
-    <div className="min-h-[calc(100vh-64px)] w-full max-w-80 space-y-8">
+    <div className="hidden min-h-[calc(100vh-64px)] w-[400px] space-y-8 pr-8 lg:block">
       <NavSection />
       <div className="mx-auto max-w-64 space-y-4 divide-y divide-white/30">
         <ProfileInfo profile={profile} />

@@ -44,14 +44,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gilroyFont.variable} font-gilroy flex min-h-screen w-full justify-between py-8 antialiased`}
+        className={`${gilroyFont.variable} font-gilroy antialiased`}
         style={{
           background: 'linear-gradient(180deg, #2F2453 0%, #0D0429 100%)',
         }}
       >
-        <Navbar />
-        {children}
-        <RightSidebar />
+        <main className="flex min-h-screen w-full justify-between gap-0 px-4 py-8 md:gap-12">
+          <Navbar />
+          {children}
+          <RightSidebar />
+        </main>
       </body>
     </html>
   )

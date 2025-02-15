@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const NavSection = () => {
   return (
-    <div className="flex items-center gap-8">
+    <div className="flex items-center justify-center gap-8">
       <div className="relative flex w-full max-w-max items-center justify-between gap-3 rounded-2xl border p-2 pr-6">
         <Image src="/svg/coins-gold.svg" width={36} height={36} alt="coins" />
         <span className="text-lg">100,000</span>
