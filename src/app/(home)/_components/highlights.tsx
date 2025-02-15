@@ -25,7 +25,7 @@ export const Highlights = () => {
 
   return (
     <div className="overflow-auto pb-2">
-      <div className="grid grid-cols-1 items-center gap-4 lg:min-w-6xl lg:grid-cols-3">
+      <div className="grid grid-cols-1 items-center gap-4 lg:min-w-5xl lg:grid-cols-3">
         {hightLightItems.map((item, index) => (
           <HightLightItem
             key={index}

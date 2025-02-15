@@ -49,7 +49,7 @@ export default function RootLayout({
           backgroundImage: 'url(/img/bg.png)',
         }}
       >
-        <main className="relative z-10 flex min-h-screen w-full justify-between gap-0 px-4 py-8 md:gap-12">
+        <main className="relative z-10 flex min-h-screen w-full justify-between gap-0 px-4 py-8 md:gap-8">
           <Navbar />
           {children}
           <RightSidebar />

@@ -40,8 +40,8 @@ export const QuickActions = () => {
             />
           </CarouselItem>
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext className="z-10" />
+        <CarouselPrevious className="left-0 z-10" />
+        <CarouselNext className="right-0 z-10" />
         <Image
           src="/img/carousel-transparent.png"
           width={122}
