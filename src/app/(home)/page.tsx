@@ -7,7 +7,7 @@ import { QuickActions } from './_components/quick-actions'
 export default function Home() {
   return (
     <>
-      <div className="grow space-y-8 overflow-x-hidden">
+      <div className="grow space-y-8 overflow-hidden">
         <SearchForm />
 
         <H2 className="text-white">Welcome Back, Madelen</H2>
