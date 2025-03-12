@@ -14,6 +14,8 @@ import H1 from '@/components/ui/typography/h1'
 import H2 from '@/components/ui/typography/h2'
 import { useState } from 'react'
 import { HightLightItem } from '../(home)/_components/highlight-item'
+import { HomeBanner } from '../(home)/_components/home-banner'
+import { CardClothes } from '@/components/ui/card/card-clothes'
 
 export default function Page() {
   const [search, setSearch] = useState('')
@@ -86,6 +88,22 @@ export default function Page() {
           arrowRight={false}
           isVideo
         />
+        <div className="flex items-center gap-4">
+          <CardClothes
+            imgClothes={'/img/clothes.png'}
+            imgAvatar={'/img/avatar.png'}
+            pseudo={'@EmWatson'}
+            date={'12.10.2024'}
+          />
+          <CardClothes
+            imgClothes={'/img/clothes.png'}
+            imgAvatar={'/img/avatar.png'}
+            pseudo={'@EmWatson'}
+            date={'12.10.2024'}
+            isLiked
+            hasDownload
+          />
+        </div>
         <CardBorderYGradient>
           <p className="text-sm opacity-70">
             By accessing the Sites and using our Services, you covenant that you
@@ -96,6 +114,7 @@ export default function Page() {
             Services.{' '}
           </p>
         </CardBorderYGradient>
+
         <hr />
         <H2>Input</H2>
 
@@ -132,6 +151,8 @@ export default function Page() {
           text={hightLightItem.text}
           ctaText={hightLightItem.ctaText}
         />
+        <H2>Banner</H2>
+        <HomeBanner />
         <H2>Notification</H2>
         <NotificationItem
           icon={'/img/avatar.png'}
