@@ -1,5 +1,5 @@
-import { NavItem } from '../ui/nav/nav-item'
-import { NavWrapper } from '../ui/nav/nav-wrapper'
+import { LeftNavItem } from '../ui/left-nav/left-nav-item'
+import { LeftNavWrapper } from '../ui/left-nav/left-nav-wrapper'
 
 export const BottomNavLinks = () => {
   const navItems = [
@@ -24,17 +24,17 @@ export const BottomNavLinks = () => {
   ]
 
   return (
-    <NavWrapper>
+    <LeftNavWrapper>
       {navItems.map((item, index) => (
-        <NavItem
+        <LeftNavItem
           key={index}
           icon={item.icon}
           href={item.href}
           isActive={item.isActive}
         >
           {item.children}
-        </NavItem>
+        </LeftNavItem>
       ))}
-    </NavWrapper>
+    </LeftNavWrapper>
   )
 }

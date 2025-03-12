@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import { Navbar } from '@/components/navbar'
+import { Navbar } from '@/components/left-navbar'
 import { RightSidebar } from '@/components/right-sidebar'
 
 const gilroyFont = localFont({
@@ -49,9 +49,10 @@ export default function RootLayout({
           backgroundImage: 'url(/img/bg.png)',
         }}
       >
-        <main className="relative z-10 flex min-h-screen w-full justify-between gap-0 px-4 py-8 md:gap-8">
+        <main className="relative z-10 flex min-h-screen w-full justify-between gap-0 px-4 py-8 2xl:gap-8">
           <Navbar />
           {children}
+
           <RightSidebar />
         </main>
       </body>

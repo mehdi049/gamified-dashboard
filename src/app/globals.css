@@ -134,3 +134,66 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 12px;
+
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #c351d278;*/
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(237, 77, 243, 0.189) 0%,
+    rgba(237, 77, 243, 0.303) 100%
+  );
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-blend-mode: overlay;
+  background: #ffffffae;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+/** Gradient border **/
+.border-gradient-tx-green::before {
+  content: '';
+  position: absolute;
+  top: -1px; /* border thickness */
+  left: -2px;
+  right: -2px;
+  bottom: -1px;
+  background: linear-gradient(
+    360deg,
+    transparent,
+    transparent,
+    #11ffff7d
+  ); /* gradient colors */
+  border-radius: 18px;
+  z-index: -1;
+}
+
+.border-gradient-y-pink::before {
+  content: '';
+  position: absolute;
+  top: -1px; /* border thickness */
+  left: -2px;
+  right: -2px;
+  bottom: -1px;
+  background:
+    linear-gradient(11deg, #e962ff61, #0000, #a2246a73),
+    linear-gradient(65deg, #e962ff42, #0000, #a2246ab0);
+  border-radius: 18px;
+  z-index: -1;
+}

@@ -1,5 +1,6 @@
-export interface TypographyProps {
+import { ChildrenProps } from '../types'
+
+export interface TypographyProps extends ChildrenProps {
   className?: string
   withBorderLeft?: boolean
-  children: React.ReactNode
 }
