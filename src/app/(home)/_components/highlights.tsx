@@ -1,7 +1,4 @@
-import { Button } from '@/components/ui/button'
-import { CardGradient } from '@/components/ui/card/card-gradient'
-import H5 from '@/components/ui/typography/h5'
-import Image from 'next/image'
+import { HightLightItem } from './highlight-item'
 
 export const Highlights = () => {
   const hightLightItems = [
@@ -39,45 +36,5 @@ export const Highlights = () => {
         ))}
       </div>
     </div>
-  )
-}
-
-interface HightLightItemProps {
-  title: string
-  text?: string
-  icon: string
-  ctaText: string
-}
-const HightLightItem = ({
-  title,
-  text,
-  icon,
-  ctaText,
-}: HightLightItemProps) => {
-  return (
-    <CardGradient>
-      <>
-        <H5 className="flex items-center gap-2 tracking-wider uppercase">
-          <Image src="/svg/trophy.svg" width={16} height={16} alt={title} />{' '}
-          {title}
-        </H5>
-        <div className="flex w-full items-center justify-between gap-4">
-          <Image src={`/svg/${icon}.svg`} width={55} height={55} alt={title} />{' '}
-          {text && (
-            <span className="text-2xl font-bold text-white">{text}</span>
-          )}
-          <Button>
-            <Image
-              src="/svg/arrow-top-bg-white.svg"
-              width={24}
-              height={24}
-              alt="arrow-top"
-              className="h-6 w-6"
-            />
-            {ctaText}
-          </Button>
-        </div>
-      </>
-    </CardGradient>
   )
 }

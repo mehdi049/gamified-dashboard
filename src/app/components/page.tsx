@@ -13,9 +13,16 @@ import { TopNavWrapper } from '@/components/ui/top-nav/top-nav-wrapper'
 import H1 from '@/components/ui/typography/h1'
 import H2 from '@/components/ui/typography/h2'
 import { useState } from 'react'
+import { HightLightItem } from '../(home)/_components/highlight-item'
 
 export default function Page() {
   const [search, setSearch] = useState('')
+  const hightLightItem = {
+    title: 'CURRENT PLAN',
+    icon: 'trophy-gold',
+    text: 'Designer',
+    ctaText: 'Upgrade',
+  }
 
   return (
     <>
@@ -53,6 +60,7 @@ export default function Page() {
             title="Edit Your First Mesh"
             text="Beginner friendly"
             isFree
+            badge="Step 1"
           />
           <CardAction
             background="action-img2"
@@ -114,6 +122,16 @@ export default function Page() {
         </div>
 
         <hr />
+        <hr />
+        <hr />
+        <hr />
+        <H2>Home Card</H2>
+        <HightLightItem
+          title={hightLightItem.title}
+          icon={hightLightItem.icon}
+          text={hightLightItem.text}
+          ctaText={hightLightItem.ctaText}
+        />
         <H2>Notification</H2>
         <NotificationItem
           icon={'/img/avatar.png'}

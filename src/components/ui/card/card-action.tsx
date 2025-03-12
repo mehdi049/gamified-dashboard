@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Tag } from '../tag'
+import { Badge } from '../badge'
 
 interface CardActionProps {
   background: string
@@ -12,6 +13,7 @@ interface CardActionProps {
   arrowRight?: boolean
   tags?: string[]
   isVideo?: boolean
+  badge?: string
 }
 
 export const CardAction = ({
@@ -25,6 +27,7 @@ export const CardAction = ({
   arrowRight = true,
   tags,
   isVideo,
+  badge,
 }: CardActionProps) => {
   const cardHeight = cardSize === 'lg' ? 'h-60' : 'h-[215px]'
 
@@ -37,6 +40,7 @@ export const CardAction = ({
           className={`flex ${cardHeight} relative flex-col justify-end gap-4 rounded-4xl bg-cover bg-center p-4`}
           style={{ backgroundImage: `url(/img/${background}.png)` }}
         >
+          {badge && <Badge className="absolute top-4 left-4">{badge}</Badge>}
           {isFree && (
             <Image
               src="/svg/free.svg"
