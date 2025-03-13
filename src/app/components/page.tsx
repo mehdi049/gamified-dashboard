@@ -38,6 +38,13 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover'
+import { Plus } from 'lucide-react'
+import { AreaWhiteBlurBg } from '@/components/ui/area/area-white-blur-bg'
 
 export default function Page() {
   const [search, setSearch] = useState('')
@@ -216,6 +223,77 @@ export default function Page() {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
+
+        <H2>Popover</H2>
+        <Popover>
+          <PopoverTrigger asChild>
+            <Button variant="outline" size="icon">
+              <Plus />
+            </Button>
+          </PopoverTrigger>
+          <PopoverContent className="w-80">
+            <AreaWhiteBlurBg>
+              <p>
+                We’re sad to see you go. <br />
+                Deleting your account will permanently erase all data, including
+                your saved projects, remixes, and profile info. This action
+                cannot be undone.
+              </p>
+            </AreaWhiteBlurBg>
+            <div className="grid gap-4">
+              <div className="space-y-2">
+                <h4 className="leading-none font-medium text-white/70">
+                  Dimensions
+                </h4>
+                <p className="text-sm text-white/70">
+                  Set the dimensions for the layer.
+                </p>
+              </div>
+              <div className="grid gap-2">
+                <div className="grid grid-cols-3 items-center gap-4">
+                  <Label htmlFor="width" className="text-white/70">
+                    Width
+                  </Label>
+                  <Input
+                    id="width"
+                    defaultValue="100%"
+                    className="col-span-2 h-8"
+                  />
+                </div>
+                <div className="grid grid-cols-3 items-center gap-4">
+                  <Label htmlFor="maxWidth" className="text-white/70">
+                    Max. width
+                  </Label>
+                  <Input
+                    id="maxWidth"
+                    defaultValue="300px"
+                    className="col-span-2 h-8"
+                  />
+                </div>
+                <div className="grid grid-cols-3 items-center gap-4">
+                  <Label htmlFor="height" className="text-white/70">
+                    Height
+                  </Label>
+                  <Input
+                    id="height"
+                    defaultValue="25px"
+                    className="col-span-2 h-8"
+                  />
+                </div>
+                <div className="grid grid-cols-3 items-center gap-4">
+                  <Label htmlFor="maxHeight" className="text-white/70">
+                    Max. height
+                  </Label>
+                  <Input
+                    id="maxHeight"
+                    defaultValue="none"
+                    className="col-span-2 h-8"
+                  />
+                </div>
+              </div>
+            </div>
+          </PopoverContent>
+        </Popover>
 
         <hr />
         <hr />
