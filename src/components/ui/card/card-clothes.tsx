@@ -87,6 +87,7 @@ export const CardClothes = ({
             width={20}
             height={20}
             alt="liked"
+            className="cursor-pointer"
           />
         ) : (
           <Image
@@ -94,6 +95,7 @@ export const CardClothes = ({
             width={20}
             height={20}
             alt="not liked"
+            className="cursor-pointer"
           />
         )}
       </div>
