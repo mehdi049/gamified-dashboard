@@ -8,13 +8,29 @@ import {
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
-
+const menuItems = [
+  {
+    href: '#',
+    icon: '/svg/profile-menu-settings.svg',
+    title: 'Account Settings',
+  },
+  {
+    href: '#',
+    icon: '/svg/profile-menu-dollar.svg',
+    title: 'Manage Billing',
+  },
+  {
+    href: '#',
+    icon: '/svg/profile-menu-help.svg',
+    title: 'Get Support',
+  },
+]
 export const ProfileMenu = () => {
   return (
     <Popover>
       <PopoverTrigger asChild>
         <IconBorderGradient>
-          <IconBlur icon="user" />
+          <IconBlur icon="user" size={22} />
         </IconBorderGradient>
       </PopoverTrigger>
       <PopoverContent className="w-72">
@@ -33,52 +49,25 @@ export const ProfileMenu = () => {
             <span className="text-foreground/70 block text-xs">
               @raymadelen
             </span>
-            <span
-              className="text-foreground inline-block rounded-full bg-linear-to-r from-[#70B4E5] from-0% to-[#C417E0] px-2 py-1 text-center text-xs font-semibold"
-              /*style={{
-                background:
-                  'linear-gradient(129.67deg, #70B4E5 0%, #C417E0 99.9%)',
-              }}*/
-            >
+            <span className="text-foreground inline-block rounded-full bg-linear-to-r from-[#70B4E5] from-0% to-[#C417E0] px-2 py-1 text-center text-xs font-semibold">
               Designer
             </span>
           </div>
         </div>
 
         <div className="mt-4 space-y-4 border-t border-white/50 p-4 pb-0">
-          <Link href="#" className="flex items-center gap-4">
-            <Image
-              src="/svg/profile-menu-settings.svg"
-              alt=""
-              width={32}
-              height={32}
-            />
-            <span className="text-foreground text-base font-semibold">
-              Account Settings
-            </span>
-          </Link>
-          <Link href="#" className="flex items-center gap-4">
-            <Image
-              src="/svg/profile-menu-dollar.svg"
-              alt=""
-              width={32}
-              height={32}
-            />
-            <span className="text-foreground text-base font-semibold">
-              Manage Billing
-            </span>
-          </Link>
-          <Link href="#" className="flex items-center gap-4">
-            <Image
-              src="/svg/profile-menu-help.svg"
-              alt=""
-              width={32}
-              height={32}
-            />
-            <span className="text-foreground text-base font-semibold">
-              Get Support
-            </span>
-          </Link>
+          {menuItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="flex items-center gap-4"
+            >
+              <Image src={item.icon} alt="" width={32} height={32} />
+              <span className="text-foreground text-base font-semibold">
+                {item.title}
+              </span>
+            </Link>
+          ))}
 
           <Button variant="secondary" className="w-full text-xs">
             <Image src="/svg/logout.svg" width={14} height={14} alt="logout" />
