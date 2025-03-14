@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChildrenProps } from '../types'
-import { IconBlur } from '../icon-blur'
+import { IconBlur } from '../icon/icon-white-blur'
 
 interface NavItemProps extends ChildrenProps {
   icon?: string

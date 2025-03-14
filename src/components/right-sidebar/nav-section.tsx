@@ -1,37 +1,35 @@
 import Image from 'next/image'
-import { IconBlur } from '../ui/icon-blur'
+import { IconBlur } from '../ui/icon/icon-white-blur'
+import { IconBorderGradient } from '../ui/icon/icon-border-gradient'
+import { IconCtaCoinsBorderGradient } from '../ui/icon/icon-cta-coins-border-gradient'
+import { Badge } from '../ui/badge'
 
 export const NavSection = () => {
   return (
     <div className="flex items-center justify-center gap-8">
-      <div
-        className="relative flex w-full max-w-max items-center justify-between gap-3 rounded-full border p-1.5 pr-6"
-        /*style={{
-          borderImageSource: 'linear-gradient(45deg, #FFC90080, #DD00CEB2)',
-          borderImageSlice: 1,
-          
-        }}*/
-      >
-        <Image src="/svg/coins-gold.svg" width={36} height={36} alt="coins" />
-        <span className="text-lg">100,000</span>
-        <Image
-          src="/svg/plus-bg-red.svg"
-          width={36}
-          height={36}
-          alt="plus"
-          className="absolute -top-3.5 -right-12 h-24 w-24"
-        />
-      </div>
+      <IconCtaCoinsBorderGradient>
+        <div className="relative flex h-11 w-full max-w-max items-center justify-between gap-3 rounded-full p-1.5 pr-6">
+          <Image src="/svg/coins-gold.svg" width={36} height={36} alt="coins" />
+          <span className="text-lg">100,000</span>
+          <Image
+            src="/svg/plus-bg-red.svg"
+            width={30}
+            height={30}
+            alt="plus"
+            className="absolute -top-2.5 -right-10 h-20 w-20"
+          />
+        </div>
+      </IconCtaCoinsBorderGradient>
 
       <div className="flex items-center gap-4">
-        <div className="relative flex h-12 w-12 items-center justify-center gap-2 rounded-full border border-gray-50">
-          <span className="bg-primary absolute top-0 right-0 h-3 w-3 rounded-full"></span>
+        <IconBorderGradient className="relative">
+          <Badge variant="notification" className="absolute top-0 right-0" />
           <IconBlur icon="ring" />
-        </div>
+        </IconBorderGradient>
 
-        <div className="flex h-12 w-12 items-center justify-center gap-2 rounded-full border border-gray-50">
+        <IconBorderGradient>
           <IconBlur icon="user" />
-        </div>
+        </IconBorderGradient>
       </div>
     </div>
   )
