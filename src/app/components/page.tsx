@@ -52,8 +52,22 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Hr } from '@/components/ui/hr'
+import { SwitchLabel } from '@/components/ui/switch-label'
+import { Switch } from '@/components/ui/switch'
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form'
+import { useForm } from 'react-hook-form'
+import { Slider } from '@/components/ui/slider'
 
 export default function Page() {
+  const form = useForm()
+
   const [search, setSearch] = useState('')
   const hightLightItem = {
     title: 'CURRENT PLAN',
@@ -61,6 +75,8 @@ export default function Page() {
     text: 'Designer',
     ctaText: 'Upgrade',
   }
+
+  const [sliderValue, setSliderValue] = useState([33])
 
   return (
     <>
@@ -313,6 +329,74 @@ export default function Page() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        <Hr />
+        <H2>Swicth</H2>
+
+        <SwitchLabel
+          options={[
+            { label: 'Option 1', value: 'option-1' },
+            { label: 'Option 2', value: 'option-2' },
+          ]}
+          value="option-1"
+          onChange={(value) => console.log(value)}
+        />
+
+        <Switch id="airplane-mode" />
+
+        <Hr />
+        <H2>Form</H2>
+        <Form {...form}>
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="w-[160px]">Username</FormLabel>
+                <FormControl>
+                  <Input placeholder="shadcn" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="w-[160px]">Username Username</FormLabel>
+                <FormControl>
+                  <Input placeholder="shadcn" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem display="vertical">
+                <FormLabel>Username Username</FormLabel>
+                <FormControl>
+                  <Input placeholder="shadcn" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </Form>
+        <Hr />
+        <H2>Slider</H2>
+        <Slider
+          defaultValue={sliderValue}
+          value={sliderValue}
+          onValueChange={(value) => setSliderValue(value)}
+          valueLabelSuffix="px"
+          max={100}
+          step={1}
+        />
 
         <Hr />
         <Hr />
