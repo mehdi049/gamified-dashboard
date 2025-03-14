@@ -13,6 +13,7 @@ export const SearchForm = () => {
       type="search"
       value={search}
       onChange={(e) => setSearch(e.target.value)}
+      className="grow"
     />
   )
 }
