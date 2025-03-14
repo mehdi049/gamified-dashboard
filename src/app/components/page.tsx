@@ -1,6 +1,5 @@
 'use client'
 
-import { NotificationItem } from '@/components/notification-item'
 import { Button } from '@/components/ui/button'
 import { CardAction } from '@/components/ui/card/card-action'
 import { CardBorderYGradient } from '@/components/ui/card/card-border-y-gradient'
@@ -64,6 +63,7 @@ import {
 } from '@/components/ui/form'
 import { useForm } from 'react-hook-form'
 import { Slider } from '@/components/ui/slider'
+import { NotificationListItem } from '@/components/notification-list-item'
 
 export default function Page() {
   const form = useForm()
@@ -265,16 +265,16 @@ export default function Page() {
             </AreaWhiteBlurBg>
             <div className="grid gap-4">
               <div className="space-y-2">
-                <h4 className="leading-none font-medium text-white/70">
+                <h4 className="text-foreground/70 leading-none font-medium">
                   Dimensions
                 </h4>
-                <p className="text-sm text-white/70">
+                <p className="text-foreground/70 text-sm">
                   Set the dimensions for the layer.
                 </p>
               </div>
               <div className="grid gap-2">
                 <div className="grid grid-cols-3 items-center gap-4">
-                  <Label htmlFor="width" className="text-white/70">
+                  <Label htmlFor="width" className="text-foreground/70">
                     Width
                   </Label>
                   <Input
@@ -284,7 +284,7 @@ export default function Page() {
                   />
                 </div>
                 <div className="grid grid-cols-3 items-center gap-4">
-                  <Label htmlFor="maxWidth" className="text-white/70">
+                  <Label htmlFor="maxWidth" className="text-foreground/70">
                     Max. width
                   </Label>
                   <Input
@@ -294,7 +294,7 @@ export default function Page() {
                   />
                 </div>
                 <div className="grid grid-cols-3 items-center gap-4">
-                  <Label htmlFor="height" className="text-white/70">
+                  <Label htmlFor="height" className="text-foreground/70">
                     Height
                   </Label>
                   <Input
@@ -304,7 +304,7 @@ export default function Page() {
                   />
                 </div>
                 <div className="grid grid-cols-3 items-center gap-4">
-                  <Label htmlFor="maxHeight" className="text-white/70">
+                  <Label htmlFor="maxHeight" className="text-foreground/70">
                     Max. height
                   </Label>
                   <Input
@@ -411,13 +411,14 @@ export default function Page() {
         <H2>Banner</H2>
         <HomeBanner />
         <H2>Notification</H2>
-        <NotificationItem
-          icon={'/img/avatar.png'}
-          name={'Madelen Sam'}
-          time={'1 min ago'}
-          message={
-            'By accessing the Sites and using our Services, you covenant that you have carefully read, clearly understood and agreed to stick to the provisions of the Agreements and any update and modification thereto. In case the User refuses the Agreements or objects to any part of the Agreements, the User is prohibited from using the Services.'
-          }
+        <NotificationListItem
+          notification={{
+            avatar: '/img/avatar.png',
+            name: 'Madelen Sam',
+            time: '1 min ago',
+            message:
+              'By accessing the Sites and using our Services, you covenant that you have carefully read, clearly understood and agreed to stick to the provisions of the Agreements and any update and modification thereto. In case the User refuses the Agreements or objects to any part of the Agreements, the User is prohibited from using the Services.',
+          }}
         />
       </div>
     </>

@@ -62,7 +62,7 @@ function Slider({
         >
           {value && value[index] > 0 && (
             <span
-              className={`mt-5 inline-block text-xs font-bold text-white ${value[index].toString().length > 2 ? '-ml-5' : '-ml-3'}`}
+              className={`text-foreground mt-5 inline-block text-xs font-bold ${value[index].toString().length > 2 ? '-ml-5' : '-ml-3'}`}
             >
               {value[index]}
               {valueLabelSuffix}

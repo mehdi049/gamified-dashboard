@@ -16,7 +16,7 @@ export const LeftNavItem = ({
 }: NavItemProps) => {
   return (
     <li
-      className={`w-full max-w-44 cursor-pointer rounded-full border border-transparent px-4 py-2 text-lg font-semibold text-white duration-200 hover:border-white hover:bg-white/20 ${isActive ? 'border-white bg-white/20 shadow-md shadow-[#00000040]' : ''}`}
+      className={`text-foreground w-full max-w-44 cursor-pointer rounded-full border border-transparent px-4 py-2 text-lg font-semibold duration-200 hover:border-white hover:bg-white/20 ${isActive ? 'border-white bg-white/20 shadow-md shadow-[#00000040]' : ''}`}
     >
       <Link href={href ?? '#'} className="flex items-center gap-4">
         {' '}

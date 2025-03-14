@@ -8,7 +8,7 @@ export const HomeBanner = () => {
       style={{ backgroundImage: 'url(/img/bg-banner.png)' }}
     >
       <div className="space-y-4">
-        <H1 className="text-white lg:text-5xl">Emporium</H1>
+        <H1 className="text-foreground lg:text-5xl">Emporium</H1>
         <div className="flex items-center justify-between gap-4">
           <p className="max-w-xl text-lg">
             Browse & Remix a Vast Collection of Editable, Game-Ready Meshes.With

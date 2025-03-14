@@ -52,7 +52,9 @@ export const CardAction = ({
           )}
           <div className="flex items-center justify-between">
             <div>
-              <p className={`${titleSize} font-bold text-white`}>{title}</p>
+              <p className={`${titleSize} text-foreground font-bold`}>
+                {title}
+              </p>
               {text && <p className="text-sm font-bold opacity-80">{text}</p>}
             </div>
             {arrowRight && (

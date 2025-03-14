@@ -12,10 +12,10 @@ import H3 from '@/components/ui/typography/h3'
 export const QuickActions = () => {
   return (
     <>
-      <H3 className="text-white">Get Started – Quick Actions</H3>
+      <H3 className="text-foreground">Get Started – Quick Actions</H3>
 
       <div className="relative -mt-4">
-        <Carousel className="">
+        <Carousel>
           <CarouselContent>
             <CarouselItem className="max-w-md">
               <CardAction

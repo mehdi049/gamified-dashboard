@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import { IconBlur } from '../ui/icon/icon-white-blur'
-import { IconBorderGradient } from '../ui/icon/icon-border-gradient'
 import { IconCtaCoinsBorderGradient } from '../ui/icon/icon-cta-coins-border-gradient'
-import { Badge } from '../ui/badge'
+import { NotificationPopover } from './notification/notification-popover'
+import { ProfileMenu } from './profile/profile-menu'
 
 export const NavSection = () => {
   return (
@@ -22,14 +21,9 @@ export const NavSection = () => {
       </IconCtaCoinsBorderGradient>
 
       <div className="flex items-center gap-4">
-        <IconBorderGradient className="relative">
-          <Badge variant="notification" className="absolute top-0 right-0" />
-          <IconBlur icon="ring" />
-        </IconBorderGradient>
+        <NotificationPopover />
 
-        <IconBorderGradient>
-          <IconBlur icon="user" />
-        </IconBorderGradient>
+        <ProfileMenu />
       </div>
     </div>
   )

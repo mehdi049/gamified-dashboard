@@ -44,6 +44,8 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  --breakpoint-3xl: 120rem;
 }
 
 /*
@@ -73,7 +75,7 @@
 @layer base {
   :root {
     --background: 237 68% 6%;
-    --foreground: 0 0% 89%;
+    --foreground: 0 0% 98%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;

@@ -76,8 +76,10 @@ export const CardClothes = ({
             />
           </div>
           <div>
-            <span className="block text-base text-white">{pseudo}</span>
-            <span className="block text-xs text-white opacity-70">{date}</span>
+            <span className="text-foreground block text-base">{pseudo}</span>
+            <span className="text-foreground block text-xs opacity-70">
+              {date}
+            </span>
           </div>
         </div>
 

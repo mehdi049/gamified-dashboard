@@ -17,7 +17,7 @@ export const TopNavItem = ({
 }: NavItemProps) => {
   return (
     <li
-      className={`text-base font-medium text-white duration-200 hover:opacity-100 ${isActive ? '' : 'opacity-70'}`}
+      className={`text-foreground text-base font-medium duration-200 hover:opacity-100 ${isActive ? '' : 'opacity-70'}`}
     >
       <Link
         href={href ?? '#'}

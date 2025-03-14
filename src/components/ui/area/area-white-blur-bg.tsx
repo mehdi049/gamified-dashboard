@@ -9,7 +9,7 @@ export const AreaWhiteBlurBg = ({
 }: AreaWhiteBlurBgProps) => {
   return (
     <div
-      className={`rounded-2xl border border-white/40 bg-white/10 p-4 text-white/70 backdrop-blur-md ${className}`}
+      className={`text-foreground/70 rounded-2xl border border-white/40 bg-white/10 p-4 backdrop-blur-md ${className}`}
     >
       {children}
     </div>

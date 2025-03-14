@@ -51,7 +51,7 @@ export default function RootLayout({
       >
         <main className="relative z-10 flex min-h-screen w-full justify-between gap-0 px-4 py-8 2xl:gap-8">
           <Navbar />
-          {children}
+          <div className="w-full max-w-7xl flex-grow">{children}</div>
 
           <RightSidebar />
         </main>
