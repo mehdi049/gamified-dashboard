@@ -25,7 +25,7 @@ export const NotificationListItem = ({
             <span className="block text-2xl font-semibold">
               {notification.name}
             </span>
-            <span className="block text-lg opacity-70">
+            <span className="block text-base opacity-70">
               {notification.time}
             </span>
           </div>

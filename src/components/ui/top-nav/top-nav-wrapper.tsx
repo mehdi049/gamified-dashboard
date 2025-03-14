@@ -1,6 +1,10 @@
-import { ChildrenProps } from '../types'
+import { TopNavItem } from './top-nav-item'
+import { TopNavItemType } from './types'
 
-export const TopNavWrapper = ({ children }: ChildrenProps) => {
+interface TopNavWrapperProps {
+  navItems: TopNavItemType[]
+}
+export const TopNavWrapper = ({ navItems }: TopNavWrapperProps) => {
   return (
     <div className="px-1">
       <ul
@@ -10,7 +14,9 @@ export const TopNavWrapper = ({ children }: ChildrenProps) => {
           backgroundSize: '100% 100%',
         }}
       >
-        {children}
+        {navItems.map((navItem, index) => (
+          <TopNavItem key={index} navItem={navItem} />
+        ))}
       </ul>
     </div>
   )

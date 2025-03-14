@@ -8,6 +8,8 @@ import {
 } from '@/components/ui/popover'
 import { Notification } from '@/types/notification.types'
 import { NotificationItem } from './notification-item'
+import Link from 'next/link'
+import { ROUTES } from '../../../../routes'
 
 const notificationItems: Notification[] = [
   {
@@ -60,9 +62,12 @@ export const NotificationPopover = () => {
           ))}
         </div>
 
-        <p className="text-foreground text-center text-xs">
+        <Link
+          href={ROUTES.NOTIFICATIONS}
+          className="text-foreground block text-center text-xs"
+        >
           See all notifications
-        </p>
+        </Link>
       </PopoverContent>
     </Popover>
   )

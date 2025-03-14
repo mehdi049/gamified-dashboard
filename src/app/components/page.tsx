@@ -7,7 +7,6 @@ import { CardGradient } from '@/components/ui/card/card-gradient'
 import { InputExtend } from '@/components/ui/extend/input-extend'
 import { LeftNavItem } from '@/components/ui/left-nav/left-nav-item'
 import { LeftNavWrapper } from '@/components/ui/left-nav/left-nav-wrapper'
-import { TopNavItem } from '@/components/ui/top-nav/top-nav-item'
 import { TopNavWrapper } from '@/components/ui/top-nav/top-nav-wrapper'
 import H1 from '@/components/ui/typography/h1'
 import H2 from '@/components/ui/typography/h2'
@@ -75,6 +74,10 @@ export default function Page() {
     text: 'Designer',
     ctaText: 'Upgrade',
   }
+  const navItems = [
+    { text: 'Alerts', icon: 'alert', href: '#', isActive: false },
+    { text: 'Updates', icon: 'updates', href: '#', isActive: true },
+  ]
 
   const [sliderValue, setSliderValue] = useState([33])
 
@@ -86,14 +89,7 @@ export default function Page() {
         <H2>H2 (25px)</H2>
         <Hr />
         <H2>Top Navbar menu</H2>
-        <TopNavWrapper>
-          <TopNavItem icon="help-round" href="#" isActive={false}>
-            Settings
-          </TopNavItem>
-          <TopNavItem icon="help-round" href="#" isActive={true}>
-            Settings
-          </TopNavItem>
-        </TopNavWrapper>
+        <TopNavWrapper navItems={navItems} />
 
         <Hr />
         <H2>Left Navbar menu</H2>
