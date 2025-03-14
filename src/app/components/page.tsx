@@ -45,6 +45,13 @@ import {
 } from '@/components/ui/popover'
 import { Plus } from 'lucide-react'
 import { AreaWhiteBlurBg } from '@/components/ui/area/area-white-blur-bg'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
+import { Hr } from '@/components/ui/hr'
 
 export default function Page() {
   const [search, setSearch] = useState('')
@@ -61,7 +68,7 @@ export default function Page() {
         <H2>Typography</H2>
         <H1>H1 (35px)</H1>
         <H2>H2 (25px)</H2>
-        <hr />
+        <Hr />
         <H2>Top Navbar menu</H2>
         <TopNavWrapper>
           <TopNavItem icon="help-round" href="#" isActive={false}>
@@ -72,7 +79,7 @@ export default function Page() {
           </TopNavItem>
         </TopNavWrapper>
 
-        <hr />
+        <Hr />
         <H2>Left Navbar menu</H2>
 
         <LeftNavWrapper>
@@ -144,7 +151,7 @@ export default function Page() {
           </p>
         </CardBorderYGradient>
 
-        <hr />
+        <Hr />
         <H2>Input</H2>
 
         <InputExtend
@@ -162,13 +169,13 @@ export default function Page() {
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
-        <hr />
+        <Hr />
         <H2>Button</H2>
         <div className="flex items-center gap-4">
           <Button>Join Now</Button>
           <Button disabled>Join Now</Button>
         </div>
-        <hr />
+        <Hr />
         <H2>Dialog</H2>
 
         <Dialog>
@@ -295,10 +302,21 @@ export default function Page() {
           </PopoverContent>
         </Popover>
 
-        <hr />
-        <hr />
-        <hr />
-        <hr />
+        <Hr />
+        <H2>Accordion</H2>
+
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionContent>
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
+        <Hr />
+        <Hr />
+        <Hr />
         <H2>Home Card</H2>
         <HightLightItem
           title={hightLightItem.title}
