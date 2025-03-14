@@ -1,3 +1,4 @@
+import { ROUTES } from '../../../routes'
 import { LeftNavItem } from '../ui/left-nav/left-nav-item'
 import { LeftNavWrapper } from '../ui/left-nav/left-nav-wrapper'
 
@@ -5,41 +6,28 @@ export const TopNavLinks = () => {
   const navItems = [
     {
       icon: 'dashboard',
-      href: '#',
+      href: ROUTES.HOME,
       isActive: true,
       children: 'Dashboard',
     },
     {
       icon: 'studio',
-      href: '#',
+      href: ROUTES.STUDIO.HOME,
       isActive: false,
       children: 'Create',
     },
-    /*{
-      icon: 'global',
-      href: '#',
-      isActive: false,
-      children: 'Emporium',
-    },*/
     {
       icon: 'library',
-      href: '#',
+      href: ROUTES.INVENTORY,
       isActive: false,
       children: 'Inventory',
     },
     {
       icon: 'store',
-      href: '#',
+      href: ROUTES.STORE,
       isActive: false,
       children: 'Store',
     },
-
-    /*{
-      icon: 'ocoins',
-      href: '#',
-      isActive: false,
-      children: 'Ocoins',
-    },*/
   ]
 
   return (

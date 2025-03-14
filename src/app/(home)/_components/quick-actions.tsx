@@ -14,7 +14,7 @@ export const QuickActions = () => {
     <>
       <H3 className="text-foreground">Get Started – Quick Actions</H3>
 
-      <div className="relative -mt-4">
+      <div className="relative">
         <Carousel>
           <CarouselContent>
             <CarouselItem className="max-w-md">

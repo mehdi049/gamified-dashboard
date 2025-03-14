@@ -34,7 +34,7 @@ export const CardAction = ({
   return (
     <div className="space-y-4">
       <div
-        className={`relative mt-4 max-w-md cursor-pointer rounded-4xl border-3 border-transparent p-0.5 duration-200 hover:border-white ${isFree ? 'border-white' : ''}`}
+        className={`relative max-w-md cursor-pointer rounded-4xl border-3 border-transparent p-0.5 duration-200 hover:border-white ${isFree ? 'border-white' : ''}`}
       >
         <div
           className={`flex ${cardHeight} relative flex-col justify-end gap-4 rounded-4xl bg-cover bg-center p-4`}

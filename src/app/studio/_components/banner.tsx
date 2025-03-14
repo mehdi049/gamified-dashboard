@@ -1,7 +1,7 @@
 import H1 from '@/components/ui/typography/h1'
 import Image from 'next/image'
 
-export const HomeBanner = () => {
+export const StudioBanner = () => {
   return (
     <div
       className="flex h-72 w-full flex-col justify-end rounded-4xl bg-white bg-cover bg-center p-8"

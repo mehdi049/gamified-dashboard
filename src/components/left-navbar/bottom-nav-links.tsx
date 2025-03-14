@@ -1,3 +1,4 @@
+import { ROUTES } from '../../../routes'
 import { LeftNavItem } from '../ui/left-nav/left-nav-item'
 import { LeftNavWrapper } from '../ui/left-nav/left-nav-wrapper'
 
@@ -5,13 +6,13 @@ export const BottomNavLinks = () => {
   const navItems = [
     {
       icon: 'help-round',
-      href: '#',
+      href: ROUTES.HELP.HELP_CENTER,
       isActive: false,
       children: 'Help',
     },
     {
       icon: 'settings',
-      href: '#',
+      href: ROUTES.SETTINGS.PROFILE,
       isActive: false,
       children: 'Setting',
     },

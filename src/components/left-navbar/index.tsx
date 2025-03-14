@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { TopNavLinks } from './top-nav-links'
 import { Button } from '../ui/button'
 import { useRouter, usePathname } from 'next/navigation'
+import { IconBlur } from '../ui/icon/icon-white-blur'
 
 export const Navbar = () => {
   const router = useRouter()
@@ -22,12 +23,7 @@ export const Navbar = () => {
                 className="h-[50px] w-[50px]"
                 onClick={() => router.back()}
               >
-                <Image
-                  src="/svg/chevron-left.svg"
-                  height={20}
-                  width={20}
-                  alt="back"
-                />
+                <IconBlur icon="chevron-left" size={20} />
               </Button>
             )}
           </div>

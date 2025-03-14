@@ -12,7 +12,7 @@ import H1 from '@/components/ui/typography/h1'
 import H2 from '@/components/ui/typography/h2'
 import { useState } from 'react'
 import { HightLightItem } from '../(home)/_components/highlight-item'
-import { HomeBanner } from '../(home)/_components/home-banner'
+import { StudioBanner } from '../studio/_components/banner'
 import { CardClothes } from '@/components/ui/card/card-clothes'
 import {
   Dialog,
@@ -405,7 +405,7 @@ export default function Page() {
           ctaText={hightLightItem.ctaText}
         />
         <H2>Banner</H2>
-        <HomeBanner />
+        <StudioBanner />
         <H2>Notification</H2>
         <NotificationListItem
           notification={{

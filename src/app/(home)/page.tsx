@@ -1,5 +1,3 @@
-'use client'
-
 import H2 from '@/components/ui/typography/h2'
 import { Highlights } from './_components/highlights'
 import { QuickActions } from './_components/quick-actions'
